@@ -1,10 +1,9 @@
-from django.urls import path
-
-from . import views
+from django.contrib import admin
+from django.urls import include, path
 
 app_name = "infra_app"
 
 urlpatterns = [
-    path("", views.index, name="index"),
-    path("second/", views.second_page, name="second_page"),
+    path('', include('infra_app.urls', namespace='infra_app')),
+    path('admin/', admin.site.urls),
 ]
