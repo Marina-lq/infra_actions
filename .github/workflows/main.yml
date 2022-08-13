@@ -54,3 +54,4 @@ jobs:
         with:
           push: true
           tags: marina2222/infra_actions:latest
+          
