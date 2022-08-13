@@ -1,9 +1,12 @@
-from django.contrib import admin
-from django.urls import include, path
 
-app_name = "infra_app"
+from django.urls import path
+
+from . import views
+
+app_name = 'infra_app'
 
 urlpatterns = [
-    path('', include('infra_app.urls', namespace='infra_app')),
-    path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('second_page/', views.second_page, name='second_page'),
+
 ]
